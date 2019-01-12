@@ -567,7 +567,8 @@ body {
       left: -70%;
       display: none;
       padding: 7px;
-      background-color: white; }
+      background-color: white;
+      z-index: 1100; }
     .feedback .fa-phone-volume {
       display: block;
       cursor: pointer; } }

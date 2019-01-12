@@ -54,6 +54,7 @@
       display: none;
       padding: 7px;
       background-color: $text-color-white;
+      z-index: 1100;
     }
 
     &__phones {}
