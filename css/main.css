@@ -328,34 +328,33 @@ body {
     height: 100px;
     background-color: #777777; }
 
-.feedback__phones {
-  display: block;
-  border-bottom: 1px solid transparent;
-  line-height: 1.2;
-  font-size: 4rem;
-  font-family: 'OpenSansCondensed-Light';
-  color: #777777; }
-  .feedback__phones:hover {
-    border-bottom: 1px solid #777777;
-    color: #777777;
-    text-decoration: none; }
-
-.feedback .fa-phone-volume {
-  display: none;
-  font-size: 40px; }
-
-.feedback__link-wrap {
+.feedback {
   text-align: right; }
-
-.feedback__link {
-  border-bottom: 1px dashed #777777;
-  text-align: right;
-  font-size: 2.4rem;
-  color: #777777; }
-  .feedback__link:hover {
-    text-decoration: none;
-    border-bottom-color: transparent;
+  .feedback__phones {
+    display: block;
+    border-bottom: 1px solid transparent;
+    line-height: 1.2;
+    font-size: 4rem;
+    font-family: 'OpenSansCondensed-Light';
     color: #777777; }
+    .feedback__phones:hover {
+      border-bottom: 1px solid #777777;
+      color: #777777;
+      text-decoration: none; }
+  .feedback .fa-phone-volume {
+    display: none;
+    font-size: 40px; }
+  .feedback__link-wrap {
+    text-align: right; }
+  .feedback__link {
+    border-bottom: 1px dashed #777777;
+    text-align: right;
+    font-size: 2.4rem;
+    color: #777777; }
+    .feedback__link:hover {
+      text-decoration: none;
+      border-bottom-color: transparent;
+      color: #777777; }
 
 .nav__item {
   display: -ms-flexbox;
