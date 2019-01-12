@@ -1,3 +1,13 @@
+$.validator.setDefaults({
+  submitHandler: function () {
+    $('.modal-close').click()
+    $('.submit-succes').fadeIn()
+    setTimeout(function () {
+      $('.submit-succes').fadeOut()
+    }, 2000)
+  }
+})
+
 $(function () {
 
   // --- Slider --- \\
@@ -25,25 +35,55 @@ $(function () {
 
   // --- Popup --- \\
   var modal = document.getElementById('popup-modal');
-  var btn = document.getElementById("open-popup-modal");
-  var span = document.getElementsByClassName("modal-close")[0];
-  btn.onclick = function () {
-    modal.style.display = "block";
-  }
-  span.onclick = function () {
-    modal.style.display = "none";
-  }
+  //  var btn = document.getElementById("open-popup-modal");
+  //  var span = document.getElementsByClassName("modal-close")[0];
+  //  btn.onclick = function () {
+  //    modal.style.display = "block";
+  //  }
+  //  span.onclick = function () {
+  //    modal.style.display = "none";
+  //  }
   //  window.onload = function () {
   //    setTimeout(function () {
   //      modal.style.display = 'block';
   //    }, 3000);
   //  }
+
+  $('#open-popup-modal').on('click', function (e) {
+    $('#popup-modal').fadeIn(400)
+  })
+
+  $('.modal-close').on('click', function (e) {
+    $('#popup-modal').fadeOut(400)
+  })
+
   window.onclick = function (event) {
     if (event.target == modal) {
-      modal.style.display = "none";
+      $('#popup-modal').fadeOut(400)
     }
   }
   // --- Popup end --- \\
+
+
+
+  // --- Feedback validate --- \\
+  $('.form-modal').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2,
+        maxlength: 40
+      },
+      phone: {
+        required: true,
+      },
+      email: {
+        required: true,
+        email: true
+      }
+    }
+  })
+  // --- Feedback validate end --- \\
 
 
 

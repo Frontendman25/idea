@@ -1,6 +1,10 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+.submit-succes {
+  display: none;
+}
+
 .header-wrap {
   padding: 6rem 0;
   background-color: $light-grey;
