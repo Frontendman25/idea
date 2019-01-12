@@ -1,0 +1,505 @@
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box; }
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+/**
+ * Basic styles for links
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  margin-top: 5rem;
+  border: none;
+  height: 1px;
+  background-color: #777; }
+
+@font-face {
+  font-family: "PT_Sans-Regular";
+  src: url("../fonts/PT_sans/PT_Sans-Web-Regular.ttf"); }
+
+@font-face {
+  font-family: "PT_Sans-Italic";
+  src: url("../fonts/PT_sans/PT_Sans-Web-Italic.ttf"); }
+
+@font-face {
+  font-family: "PT_Sans-BoldItalic";
+  src: url("../fonts/PT_sans/PT_Sans-Web-BoldItalic.ttf"); }
+
+@font-face {
+  font-family: "PT_Sans-Bold";
+  src: url("../fonts/PT_sans/PT_Sans-Web-Bold.ttf"); }
+
+@font-face {
+  font-family: "OpenSansCondensed-Bold";
+  src: url("../fonts/Open_Sans_Condensed/OpenSansCondensed-Bold.ttf"); }
+
+@font-face {
+  font-family: "OpenSansCondensed-Light";
+  src: url("../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf"); }
+
+@font-face {
+  font-family: "OpenSansCondensed-LightItalic";
+  src: url("../fonts/Open_Sans_Condensed/OpenSansCondensed-LightItalic.ttf"); }
+
+/**
+ * Basic typography style for copy text
+ */
+html,
+body {
+  font-size: 10px; }
+
+body {
+  color: #767676;
+  font: normal 1.4rem/1.7 "PT_Sans-Regular", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; }
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table; }
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  max-width: 1180px;
+  /* 1 */
+  margin-left: auto;
+  /* 2 */
+  margin-right: auto;
+  /* 2 */
+  padding-left: 20px;
+  /* 3 */
+  padding-right: 20px;
+  /* 3 */
+  width: 100%;
+  /* 1 */ }
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap; }
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.modal {
+  position: fixed;
+  z-index: 9999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.modal-content {
+  background-color: #fff;
+  width: 90%;
+  padding: 15px 6.5rem;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 500px;
+  max-height: auto;
+  margin: auto;
+  border: 0px solid #fcfcfc;
+  font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif; }
+
+.modal-close {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  line-height: .4;
+  font-size: 40px;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.6) !important;
+  transition: all .2s;
+  cursor: pointer;
+  width: auto; }
+
+.modal-close:hover {
+  color: #3b3b3b; }
+
+@media screen and (max-width: 27em) {
+  .modal-content {
+    width: 90%; } }
+
+.modal-input-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 1.3rem; }
+
+.modal-input {
+  width: 100%; }
+
+.modal-caption {
+  margin-bottom: 2rem; }
+
+.modal-caption,
+.modal-btn {
+  font-family: 'PT_Sans-Bold'; }
+
+.modal-btn {
+  border: none;
+  padding: 5px 10px;
+  background-color: #777;
+  color: white;
+  cursor: pointer; }
+
+.header-wrap {
+  padding: 6rem 0;
+  background-color: gainsboro; }
+
+.header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.logo {
+  display: -ms-flexbox;
+  display: flex; }
+  .logo__img {
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: #777777; }
+
+.feedback__phones {
+  display: block;
+  border-bottom: 1px solid transparent;
+  line-height: 1.2;
+  font-size: 4rem;
+  font-family: 'OpenSansCondensed-Light';
+  color: #777777; }
+  .feedback__phones:hover {
+    border-bottom: 1px solid #777777;
+    color: #777777;
+    text-decoration: none; }
+
+.feedback__link-wrap {
+  text-align: right; }
+
+.feedback__link {
+  border-bottom: 1px dashed #777777;
+  text-align: right;
+  font-size: 2.4rem;
+  color: #777777; }
+  .feedback__link:hover {
+    text-decoration: none;
+    border-bottom-color: transparent;
+    color: #777777; }
+
+.nav__item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%; }
+
+.nav__items {
+  font-size: 3rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-positive: 1;
+      flex-grow: 1; }
+  .nav__items:after {
+    content: '|';
+    color: white; }
+  .nav__items:last-child::after {
+    content: ''; }
+
+.menu {
+  padding: 1.5rem 0;
+  background-color: #777777; }
+
+.nav__link {
+  color: white; }
+  .nav__link:hover {
+    text-decoration: underline;
+    color: white; }
+
+.slider__img-wrap {
+  position: relative; }
+
+.slider__img {
+  margin: 0 auto; }
+
+.slider__arrow {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 10; }
+  .slider__arrow_left {
+    left: 15%; }
+  .slider__arrow_right {
+    right: 15%; }
+
+.content-wrap {
+  margin-bottom: 20rem; }
+
+.breadcrumb {
+  background-color: transparent; }
+  .breadcrumb li + li:before {
+    padding: 8px;
+    content: "/\00a0"; }
+  .breadcrumb__items {
+    display: -ms-flexbox;
+    display: flex; }
+  .breadcrumb__link {
+    color: #777777; }
+    .breadcrumb__link:hover {
+      color: #777777; }
+
+.leftblock__items-wrap {
+  margin-bottom: 10rem; }
+
+.leftblock {
+  margin-bottom: 2rem; }
+  .leftblock__link-list, .leftblock__link {
+    word-break: break-word;
+    color: #777777; }
+  .leftblock__items {
+    padding-left: 24px;
+    list-style: disc; }
+  .leftblock__link-list:hover, .leftblock__link:hover {
+    color: #777777; }
+  .leftblock__link-list {
+    font-size: 1.8rem; }
+  .leftblock__link {
+    font-size: 1.4rem; }
+
+.file__input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+  .file__input + label {
+    cursor: pointer; }
+
+.file__caption {
+  font-size: 3rem;
+  font-family: 'PT_Sans-Bold'; }
+
+.product__wrap {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: gainsboro; }
+
+.product__wrap-img {
+  margin-bottom: 5rem; }
+
+.product__buy {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.product__price {
+  font-size: 2.8rem;
+  font-family: "PT_Sans-Bold"; }
+
+.pagination {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .pagination__link {
+    padding: 10px;
+    color: #777777; }
+    .pagination__link:hover {
+      line-height: 1;
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: #777777; }
+
+.footer-wrap {
+  padding: 4.2rem 0;
+  background-color: #777777;
+  color: white; }
+
+.nav-footer__link {
+  text-decoration: underline;
+  color: white; }
+  .nav-footer__link:hover {
+    text-decoration: none;
+    color: white; }
+
+.company {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .company__img {
+    margin-right: 7px; }

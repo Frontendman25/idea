@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the slider of the site/application.
+// -----------------------------------------------------------------------------
+.slider {
+  &__img-wrap {
+    position: relative;
+  }
+
+  &__img {
+    margin: 0 auto;
+  }
+
+  &__arrow {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 10;
+
+    &_left {
+      left: 15%;
+    }
+
+    &_right {
+      right: 15%;
+    }
+  }
+}

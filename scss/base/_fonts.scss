@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+// PT_Sans-Regular
+@font-face {
+  font-family: "PT_Sans-Regular";
+  src: url("../fonts/PT_sans/PT_Sans-Web-Regular.ttf");
+}
+
+@font-face {
+  font-family: "PT_Sans-Italic";
+  src: url("../fonts/PT_sans/PT_Sans-Web-Italic.ttf");
+}
+
+@font-face {
+  font-family: "PT_Sans-BoldItalic";
+  src: url("../fonts/PT_sans/PT_Sans-Web-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "PT_Sans-Bold";
+  src: url("../fonts/PT_sans/PT_Sans-Web-Bold.ttf");
+}
+
+
+// Open_Sans_Condensed
+@font-face {
+  font-family: "OpenSansCondensed-Bold";
+  src: url("../fonts/Open_Sans_Condensed/OpenSansCondensed-Bold.ttf");
+}
+
+@font-face {
+  font-family: "OpenSansCondensed-Light";
+  src: url("../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf");
+}
+
+@font-face {
+  font-family: "OpenSansCondensed-LightItalic";
+  src: url("../fonts/Open_Sans_Condensed/OpenSansCondensed-LightItalic.ttf");
+}

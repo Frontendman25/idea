@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer-wrap {
+  padding: 4.2rem 0;
+  background-color: $dark-grey;
+  color: $text-color-white;
+}
+
+.nav-footer {
+  &__link {
+    text-decoration: underline;
+    color: $text-color-white;
+
+    &:hover {
+      text-decoration: none;
+      color: $text-color-white;
+    }
+  }
+}
+
+.company {
+  display: flex;
+  justify-content: center;
+
+  &__img {
+    margin-right: 7px;
+  }
+}

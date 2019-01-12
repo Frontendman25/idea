@@ -1,0 +1,98 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.header-wrap {
+  padding: 6rem 0;
+  background-color: $light-grey;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+
+  &__img {
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: $dark-grey;
+  }
+}
+
+.feedback {
+  &__phones {
+    display: block;
+    border-bottom: 1px solid transparent;
+    line-height: 1.2;
+    font-size: 4rem;
+    font-family: 'OpenSansCondensed-Light';
+    color: $dark-grey;
+
+    &:hover {
+      border-bottom: 1px solid $dark-grey;
+      color: $dark-grey;
+      text-decoration: none;
+    }
+  }
+
+  &__link-wrap {
+    text-align: right;
+  }
+
+  &__link {
+    border-bottom: 1px dashed $dark-grey;
+    text-align: right;
+    font-size: 2.4rem;
+    color: $dark-grey;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom-color: transparent;
+      color: $dark-grey;
+    }
+  }
+}
+
+.nav {
+  &__item {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  &__items {
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+
+    &:after {
+      content: '|';
+      color: $text-color-white;
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+  }
+}
+
+.menu {
+  padding: 1.5rem 0;
+  background-color: $dark-grey;
+}
+
+.nav {
+  &__link {
+    color: $text-color-white;
+
+    &:hover {
+      text-decoration: underline;
+      color: $text-color-white;
+    }
+  }
+}

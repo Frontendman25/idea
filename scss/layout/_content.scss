@@ -1,0 +1,126 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the content of the site/application.
+// -----------------------------------------------------------------------------
+.content-wrap {
+  margin-bottom: 20rem;
+}
+
+.breadcrumb {
+  background-color: transparent;
+
+  & li + li:before {
+    padding: 8px;
+    content: "/\00a0";
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {}
+
+  &__link {
+    color: $dark-grey;
+
+    &:hover {
+      color: $dark-grey;
+    }
+  }
+}
+
+.leftblock__items-wrap {
+  margin-bottom: 10rem;
+}
+
+.leftblock {
+  margin-bottom: 2rem;
+
+  &__link-list,
+  &__link {
+    word-break: break-word;
+    color: $dark-grey;
+  }
+
+  &__items {
+    padding-left: 24px;
+    list-style: disc;
+  }
+
+  &__link-list,
+  &__link {
+    &:hover {
+      color: $dark-grey;
+    }
+  }
+
+  &__link-list {
+    font-size: 1.8rem;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+  }
+}
+
+.file {
+  &__input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    & + label {
+      cursor: pointer;
+    }
+
+  }
+
+  &__caption {
+    font-size: 3rem;
+    font-family: 'PT_Sans-Bold';
+  }
+}
+
+.centerblock {}
+
+.product {
+  &__wrap {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: $light-grey;
+  }
+
+  &__wrap-img {
+    margin-bottom: 5rem;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 2.8rem;
+    font-family: "PT_Sans-Bold";
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__link {
+    padding: 10px;
+    color: $dark-grey;
+
+    &:hover {
+      line-height: 1;
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: $dark-grey;
+    }
+  }
+}
