@@ -50,9 +50,11 @@
     &__wrap-phones {
       position: absolute;
       top: 65%;
-      left: -80%;
+      left: -170%;
       display: none;
       padding: 7px;
+      width: 253%;
+      text-align: center;
       background-color: $text-color-white;
       z-index: 1100;
     }
