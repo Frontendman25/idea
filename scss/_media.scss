@@ -35,7 +35,10 @@
   }
 
   #burger-menu {
-    display: block;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 100%;
   }
 }
 

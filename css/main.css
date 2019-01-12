@@ -392,7 +392,7 @@ body {
 
 #burger-menu {
   display: none;
-  height: 20px;
+  height: 24px;
   cursor: pointer; }
 
 .bars {
@@ -404,6 +404,10 @@ body {
 
 .slider__img-wrap {
   position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   max-height: 500px; }
 
 .slider__img {
@@ -546,7 +550,13 @@ body {
     .nav__items:after {
       display: none; }
   #burger-menu {
-    display: block; } }
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+        align-items: flex-end;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    width: 100%; } }
 
 @media (max-width: 575.98px) {
   .feedback {

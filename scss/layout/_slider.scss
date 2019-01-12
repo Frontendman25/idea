@@ -4,6 +4,8 @@
 .slider {
   &__img-wrap {
     position: relative;
+    display: flex;
+    align-items: center;
     max-height: 500px;
   }
 
