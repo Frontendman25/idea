@@ -10,8 +10,8 @@ $(function () {
     dots: false,
     prevArrow: '<img class="slider__arrow slider__arrow_left" src="img/arrow-left.jpg" />',
     nextArrow: '<img class="slider__arrow slider__arrow_right" src="img/arrow-right.jpg" />',
-    autoplay: true,
-    autoplaySpeed: 4000
+    //    autoplay: true,
+    //    autoplaySpeed: 4000
   });
   // --- Slider end --- \\
 
@@ -46,10 +46,16 @@ $(function () {
     $('.nav__item').stop().slideToggle('400')
   });
 
+  // --- Toggle menu end --- \\
+
+  $('.fa-phone-volume').on('click', function (e) {
+    $('.feedback__wrap-phones').stop().slideToggle('400')
+  })
+
   $(window).resize(function () {
-    if ($(window).width() > 768) {
+    if ($(window).width() > 768 || $(window).width() > 576) {
       $('.nav__item').removeAttr('style');
+      $('.feedback__wrap-phones').removeAttr('style');
     }
   })
-  // --- Toggle menu end --- \\
 })

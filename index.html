@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- slick -->
   <link rel="stylesheet" type="text/css" href="js/slick-1.8.1/slick/slick.css" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <!-- my css -->
   <link rel="stylesheet" href="css/main.css">
   <title>IdeaDigitalAgency</title>
@@ -25,47 +27,50 @@
             <p class="logo__desc">самая клевая компания</p>
           </div>
         </div>
+
         <div class="feedback">
-          <!--          <a href="tel:+7 (4012) 52 44 07">+7 (4012) 52 44 07</a>-->
-
-
-          <a href="tel:+38(097) 977-97-97" class="feedback__phones">+38(097) 977-97-97</a>
-          <a href="tel:+38(050) 977-97-97" class="feedback__phones">+38(050) 977-97-97</a>
+          <i class="fas fa-phone-volume"></i>
+          <div class="feedback__wrap-phones">
+            <a href="tel:+38(097) 977-97-97" class="feedback__phones">
+              <span class="feedback__number">+38(097) 977-97-97</span></a>
+            <a href="tel:+38(050) 977-97-97" class="feedback__phones">
+              <span class="feedback__number">+38(050) 977-97-97</span></a>
+          </div>
           <div class="feedback__link-wrap">
             <a id="open-popup-modal" class="feedback__link" href="#">Обратная связь</a>
           </div>
+        </div>
 
-          <div id="popup-modal" class="modal">
-            <div class="modal-content">
-              <a class="modal-close">×</a>
-              <h2 class="modal-caption text-center">ОБРАТНАЯ СВЯЗЬ</h2>
-              <form action="#" class="form-modal">
-                <div class="modal-input-wrap">
-                  <label class="modal-name" for="name">Ваше имя *</label>
-                  <input class="modal-input" id="name" type="text">
-                </div>
-                <div class="modal-input-wrap">
-                  <label class="modal-name" for="phone">Телефон *</label>
-                  <input class="modal-input" id="name" type="text">
-                </div>
-                <div class="modal-input-wrap">
-                  <label class="modal-name" for="email">Email *</label>
-                  <input class="modal-input" id="email" type="text">
-                </div>
-                <div class="modal-input-wrap">
-                  <label class="modal-name" for="message">Сообщение</label>
-                  <textarea class="modal-input" name="message" id="message" rows="5"></textarea>
-                </div>
-                <div class="modal-btn-wrap text-center">
-                  <button class="modal-btn">ОТПРАВИТЬ</button>
-                </div>
-              </form>
-            </div>
+        <div id="popup-modal" class="modal">
+          <div class="modal-content">
+            <a class="modal-close">×</a>
+            <h2 class="modal-caption text-center">ОБРАТНАЯ СВЯЗЬ</h2>
+            <form action="#" class="form-modal">
+              <div class="modal-input-wrap">
+                <label class="modal-name" for="name">Ваше имя *</label>
+                <input class="modal-input" id="name" type="text">
+              </div>
+              <div class="modal-input-wrap">
+                <label class="modal-name" for="phone">Телефон *</label>
+                <input class="modal-input" id="name" type="text">
+              </div>
+              <div class="modal-input-wrap">
+                <label class="modal-name" for="email">Email *</label>
+                <input class="modal-input" id="email" type="text">
+              </div>
+              <div class="modal-input-wrap">
+                <label class="modal-name" for="message">Сообщение</label>
+                <textarea class="modal-input" name="message" id="message" rows="5"></textarea>
+              </div>
+              <div class="modal-btn-wrap text-center">
+                <button class="modal-btn">ОТПРАВИТЬ</button>
+              </div>
+            </form>
           </div>
-
         </div>
 
       </div>
+
     </div>
 
   </header>
@@ -91,6 +96,9 @@
 
   <section class="slider-wrap">
     <div class="slider">
+      <div class="slider__img-wrap">
+        <img class="slider__img img-fluid" src="img/Picture%20tz.jpg" alt="circles">
+      </div>
       <div class="slider__img-wrap">
         <img class="slider__img img-fluid" src="img/test-v3.png" alt="circles">
       </div>
@@ -257,13 +265,13 @@
   <footer class="footer-wrap">
     <div class="container">
       <div class="footer row">
-        <div class="col-sm-4">
+        <div class="footer__item col">
           <p class="copy">
             &copy; <time>2012-2018</time><span>"Пиксель"</span>
           </p>
           <address>info@name.com </address>
         </div>
-        <div class="col-sm-4">
+        <div class="footer__item col">
           <nav class="nav-footer">
             <ul class="nav-footer__item">
               <li class="nav-footer__items"><a href="#" class="nav-footer__link">Главная</a></li>
@@ -274,7 +282,7 @@
             </ul>
           </nav>
         </div>
-        <div class="col-sm-4">
+        <div class="footer__item col">
           <div class="company">
             <img src="img/company.png" alt="" class="company__img">
             <p class="company__link">Разработка сайта -<br>компания IdeaDigital.Agency</p>

@@ -2,9 +2,15 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 .footer-wrap {
-  padding: 4.2rem 0;
+  padding: 3.2rem 0;
   background-color: $dark-grey;
   color: $text-color-white;
+}
+
+.footer {
+  &__item {
+    margin-bottom: 1rem;
+  }
 }
 
 .nav-footer {

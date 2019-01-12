@@ -41,7 +41,26 @@
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-  html {}
+  .feedback {
+    position: relative;
+
+    &__wrap-phones {
+      position: absolute;
+      top: 65%;
+      left: -70%;
+      display: none;
+      padding: 7px;
+      background-color: $text-color-white;
+    }
+
+    &__phones {}
+
+    .fa-phone-volume {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
 }
 
 
