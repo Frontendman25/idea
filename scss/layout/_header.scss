@@ -60,6 +60,7 @@
 .nav {
   &__item {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
   }
@@ -95,4 +96,18 @@
       color: $text-color-white;
     }
   }
+}
+
+#burger-menu {
+  display: none;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bars {
+  background: $text-color-white;
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin-bottom: 5px;
 }

@@ -2,7 +2,8 @@
  * Set up a decent box model on the root element
  */
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -355,6 +356,8 @@ body {
 .nav__item {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 100%; }
@@ -382,6 +385,18 @@ body {
   .nav__link:hover {
     text-decoration: underline;
     color: white; }
+
+#burger-menu {
+  display: none;
+  height: 20px;
+  cursor: pointer; }
+
+.bars {
+  background: white;
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin-bottom: 5px; }
 
 .slider__img-wrap {
   position: relative; }
@@ -456,7 +471,8 @@ body {
   background-color: gainsboro; }
 
 .product__wrap-img {
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  text-align: center; }
 
 .product__buy {
   display: -ms-flexbox;
@@ -503,3 +519,23 @@ body {
       justify-content: center; }
   .company__img {
     margin-right: 7px; }
+
+@media (max-width: 991.98px) {
+  html {
+    font-size: 9px; } }
+
+@media (max-width: 767.98px) {
+  html {
+    font-size: 8px; }
+  .nav {
+    -ms-flex-pack: center;
+        justify-content: center; }
+    .nav__item {
+      display: none;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      margin-top: 7px; }
+    .nav__items:after {
+      display: none; }
+  #burger-menu {
+    display: block; } }

@@ -15,10 +15,10 @@ gulp.task('styles', function () {
       message: '- Styles task complete -'
     }))
     .pipe(gulp.dest('css/'))
-//    .pipe(rename({
-        //      suffix: '.min'
-        //    }))
-        //    .pipe(cleancss())
+  //    .pipe(rename({
+  //      suffix: '.min'
+  //    }))
+  //    .pipe(cleancss())
 })
 
 gulp.task('imagemin', function () {
@@ -26,8 +26,6 @@ gulp.task('imagemin', function () {
     .pipe(imagemin())
     .pipe(gulp.dest('img'))
 })
-
-//gulp.task('images/**/*', gulp.series('images'))
 
 gulp.task('watch', function () {
   gulp.watch('scss/**/*.scss', gulp.series('styles'));
