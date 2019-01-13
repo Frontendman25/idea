@@ -15,10 +15,11 @@ gulp.task('styles', function () {
       message: '- Styles task complete -'
     }))
     .pipe(gulp.dest('css/'))
-  //    .pipe(rename({
-  //      suffix: '.min'
-  //    }))
-  //    .pipe(cleancss())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(cleancss())
+    .pipe(gulp.dest('css/'))
 })
 
 gulp.task('imagemin', function () {

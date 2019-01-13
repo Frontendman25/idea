@@ -73,15 +73,11 @@ $(function () {
       if ($(element).hasClass('valid')) {
         $(element).removeClass('valid')
       }
-      //      const labTxt = $('label.error').text()
-      //      console.log($(element).next().text())
-      //      if($())
       $(element)
         .addClass('invalid')
-      //        .attr('placeholder', $(element).next().text())
-      //        .click(function () {})
-
-      //      $(element).val()      
+      $(element).change(function (e) {
+        $(element).next().text('')
+      })
     },
     unhighlight: function (element) {
       if ($(element).hasClass('invalid')) {
