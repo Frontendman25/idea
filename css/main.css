@@ -293,10 +293,10 @@ body {
       flex-direction: column;
   -ms-flex-align: center;
       align-items: center;
-  margin-bottom: 1.3rem; }
+  margin-bottom: 2.3rem; }
 
 .modal-input {
-  padding: 5px;
+  padding: 5px 10px;
   width: 100%; }
 
 .modal-caption {

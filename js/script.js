@@ -75,9 +75,17 @@ $(function () {
       }
       $(element)
         .addClass('invalid')
-      $(element).change(function (e) {
-        $(element).next().text('')
+      $(element).focusin(function (e) {
+        $(element).next().css('top', '58px')
+        $(element).parent().css('margin-bottom', '2.3rem')
       })
+      if ($(element).val() === '') {
+        $(element).next().css('top', '29px')
+        $(element).parent().css('margin-bottom', '1.3rem')
+      } else {
+        $(element).parent().css('margin-bottom', '2.3rem')
+      }
+      console.log($(element).text())
     },
     unhighlight: function (element) {
       if ($(element).hasClass('invalid')) {
