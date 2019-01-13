@@ -10,7 +10,6 @@ $.validator.setDefaults({
 })
 
 $(function () {
-
   // --- Slider --- \\
   $('.slider').slick({
     dots: true,
@@ -31,6 +30,7 @@ $(function () {
     "align-tems": "center"
   })
   // --- Slider end --- \\
+
 
 
 
@@ -68,6 +68,29 @@ $(function () {
 
 
   // --- Feedback validate --- \\
+  $.validator.setDefaults({
+    highlight: function (element) {
+      if ($(element).hasClass('valid')) {
+        $(element).removeClass('valid')
+      }
+      //      const labTxt = $('label.error').text()
+      //      console.log($(element).next().text())
+      //      if($())
+      $(element)
+        .addClass('invalid')
+      //        .attr('placeholder', $(element).next().text())
+      //        .click(function () {})
+
+      //      $(element).val()      
+    },
+    unhighlight: function (element) {
+      if ($(element).hasClass('invalid')) {
+        $(element).removeClass('invalid')
+      }
+      $(element).addClass('valid')
+    }
+  })
+
   $('.form-modal').validate({
     rules: {
       name: {
@@ -86,14 +109,15 @@ $(function () {
     messages: {
       email: {
         required: 'Поле обязательно для заполнения',
-        email: 'Введите пожалуйста корректный email'
+        email: 'Введите корректный email'
       },
       name: {
         required: 'Поле обязательно для заполнения',
-        minlength: 'Введите пожалуйста хотя бы 2 символа'
+        minlength: 'Введите хотя бы 2 символа'
       },
       phone: {
-        required: 'Поле обязательно для заполнения'
+        required: 'Поле обязательно для заполнения',
+        maxlength: 13
       }
     }
   })

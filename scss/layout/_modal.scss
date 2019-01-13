@@ -51,6 +51,7 @@
 }
 
 .modal-input-wrap {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,6 +59,7 @@
 }
 
 .modal-input {
+  padding: 5px;
   width: 100%;
 }
 
@@ -79,7 +81,11 @@
 }
 
 label.error {
-  color: red;
+  position: absolute;
+  left: 10px;
+  top: 29px;
+  font-family: 'PT_Sans-Italic';
+  color: rgba(255, 0, 0, .8);
 }
 
 .submit-success {
@@ -94,4 +100,18 @@ label.error {
   text-align: center;
   font-size: 3rem;
   color: green;
+}
+
+.invalid {
+  border: 1px solid red;
+  -webkit-box-shadow: inset 0px 0px 10px 5px rgba(255, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px 0px 10px 5px rgba(255, 0, 0, 0.2);
+  box-shadow: inset 0px 0px 10px 5px rgba(255, 0, 0, 0.2);
+}
+
+.valid {
+  border: 1px solid green;
+  -webkit-box-shadow: inset 0px 0px 10px 5px rgba(0, 128, 0, 0.2);
+  -moz-box-shadow: inset 0px 0px 10px 5px rgba(0, 128, 0, 0.2);
+  box-shadow: inset 0px 0px 10px 5px rgba(0, 128, 0, 0.2);
 }
