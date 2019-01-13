@@ -277,9 +277,10 @@ body {
 .modal-close:hover {
   color: #3b3b3b; }
 
-@media screen and (max-width: 27em) {
+@media (max-width: 575.98px) {
   .modal-content {
-    width: 90%; } }
+    padding: 10px 3.5rem;
+    width: 87%; } }
 
 .modal-input-wrap {
   display: -ms-flexbox;
@@ -306,6 +307,23 @@ body {
   background-color: #777;
   color: white;
   cursor: pointer; }
+
+label.error {
+  color: red; }
+
+.submit-success {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  display: none;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  font-size: 3rem;
+  color: green; }
 
 .submit-succes {
   display: none; }

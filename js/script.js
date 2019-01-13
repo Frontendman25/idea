@@ -1,10 +1,11 @@
 $.validator.setDefaults({
   submitHandler: function () {
     $('.modal-close').click()
-    $('.submit-succes').fadeIn()
+    $('.submit-success').fadeIn()
     setTimeout(function () {
-      $('.submit-succes').fadeOut()
+      $('.submit-success').fadeOut()
     }, 2000)
+    $('.form-modal').find($('input')).val('')
   }
 })
 
@@ -24,7 +25,7 @@ $(function () {
     autoplaySpeed: 4000
   });
 
-  // Addin styles for centering 
+  // Adding styles for centering 
   $('.slider__img-wrap').css({
     "display": "flex",
     "align-tems": "center"
@@ -80,6 +81,19 @@ $(function () {
       email: {
         required: true,
         email: true
+      }
+    },
+    messages: {
+      email: {
+        required: 'Поле обязательно для заполнения',
+        email: 'Введите пожалуйста корректный email'
+      },
+      name: {
+        required: 'Поле обязательно для заполнения',
+        minlength: 'Введите пожалуйста хотя бы 2 символа'
+      },
+      phone: {
+        required: 'Поле обязательно для заполнения'
       }
     }
   })
