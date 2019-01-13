@@ -104,6 +104,8 @@ $(function () {
       },
       phone: {
         required: true,
+        minlength: 10,
+        maxlength: 13
       },
       email: {
         required: true,
@@ -121,7 +123,8 @@ $(function () {
       },
       phone: {
         required: 'Поле обязательно для заполнения',
-        maxlength: 13
+        maxlength: 'Слишком много символов',
+        minlength: 'Введите хотя бы 10 символов'
       }
     }
   })
